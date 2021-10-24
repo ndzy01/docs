@@ -2,6 +2,7 @@ module.exports = {
   title: 'docs',
   description: 'docs',
   docsDir: 'docs',
+  base: '/docs/',
   themeConfig: {
     algolia: {
       //   appId: "ELMZBWYVTV",
