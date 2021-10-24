@@ -1,1 +1,0 @@
-import{_ as t,c as a,o as e}from"./app.6b2cf1a0.js";const f='{"title":"","description":"","frontmatter":{},"relativePath":"sjx/dva.md","lastUpdated":1635101618969}',r={};function o(s,c,n,p,d,_){return e(),a("div")}var l=t(r,[["render",o]]);export{f as __pageData,l as default};
