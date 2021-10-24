@@ -1,0 +1,15 @@
+{
+  "name": "docs",
+  "scripts": {
+    "dev": "vitepress dev docs",
+    "build": "vitepress build docs",
+    "serve": "vitepress serve docs",
+    "lint": "prettier --w . --config .prettierrc",
+    "d": "gh-pages -d docs/.vitepress/dist"
+  },
+  "devDependencies": {
+    "gh-pages": "^3.2.3",
+    "prettier": "^2.4.1",
+    "vitepress": "^0.20.0"
+  }
+}
