@@ -1,1 +1,0 @@
-import{_ as e,c as t,o as a,a as o}from"./app.cdf78b2e.js";const u='{"title":"","description":"","frontmatter":{},"relativePath":"index.md","lastUpdated":1635101995812}',s={},n=o("p",null,"111",-1),c=[n];function r(d,_,p,i,l,f){return a(),t("div",null,c)}var x=e(s,[["render",r]]);export{u as __pageData,x as default};
