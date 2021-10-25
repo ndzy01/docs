@@ -4,6 +4,6 @@
 
 `yarn upgrade-interactive --latest`
 
-##
+## algolia
 
-https://docsearch.algolia.com/apply/
+`https://docsearch.algolia.com/apply/`

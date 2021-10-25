@@ -4,8 +4,8 @@
     "dev": "vitepress dev docs",
     "build": "vitepress build docs",
     "serve": "vitepress serve docs",
-    "lint": "prettier --w . --config .prettierrc",
-    "d": "npm run lint && npm run build && gh-pages -d docs/.vitepress/dist"
+    "lint": "node readFiles.js && prettier --w . --config .prettierrc",
+    "d": "node readFiles.js && npm run lint && npm run build && gh-pages -d docs/.vitepress/dist"
   },
   "devDependencies": {
     "gh-pages": "^3.2.3",
