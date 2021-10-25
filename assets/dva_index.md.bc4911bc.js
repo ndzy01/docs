@@ -1,0 +1,1 @@
+import{_ as e,c as t,o as a,a as o}from"./app.6da3b578.js";const u='{"title":"","description":"","frontmatter":{},"relativePath":"dva/index.md","lastUpdated":1635118246331}',s={},n=o("p",null,"aaa",-1),r=[n];function c(d,_,p,i,l,f){return a(),t("div",null,r)}var x=e(s,[["render",c]]);export{u as __pageData,x as default};
