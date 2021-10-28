@@ -4,7 +4,6 @@ export default {
   title: 'docs',
   description: 'docs',
   docsDir: 'docs',
-  base: '/docs/',
   themeConfig: {
     algolia: {
       apiKey: 'ef66bb20104d82b7c4f08621b4c73c92',
