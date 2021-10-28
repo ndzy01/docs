@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-const docsRoot = path.join(__dirname, '.', 'docs');
+const docsRoot = path.join(__dirname, '.', 'ndzy-docs');
 
 function readFileList(
   dir = docsRoot,
@@ -18,8 +18,8 @@ function readFileList(
       readFileList(path.join(dir, item), filesList, dirList, item, pages);
       dirList.push(item);
     } else {
-      const flag1 = '/docs/docs';
-      const flag2 = '/docs/docs/';
+      const flag1 = '/ndzy-docs';
+      const flag2 = '/ndzy-docs/';
       const fileNameArr = path.basename(filePath).split('.');
       const name = fileNameArr[0];
       const type = fileNameArr[1];

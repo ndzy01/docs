@@ -1,8 +1,8 @@
 {
   "name": "docs",
   "scripts": {
-    "dev": "vitepress dev docs --host",
-    "build": "vitepress build docs",
+    "dev": "vitepress dev ndzy-docs --host",
+    "build": "vitepress build ndzy-docs",
     "lint": "prettier --w . --config .prettierrc"
   },
   "devDependencies": {

@@ -3,7 +3,7 @@ import { nav, sidebar, pages } from '../../readFiles';
 export default {
   title: 'docs',
   description: 'docs',
-  docsDir: 'docs',
+  docsDir: 'ndzy-docs',
   markdown: {
     config: (md) => {
       md.use(require('markdown-it-copy'), { btnText: '复制' }).use(
