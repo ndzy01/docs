@@ -5,5 +5,5 @@
 `yarn upgrade-interactive --latest`
 
 ## algolia
-
+test
 [algolia](https://docsearch.algolia.com/apply/)
