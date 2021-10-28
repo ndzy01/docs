@@ -1,11 +1,13 @@
 {
   "name": "docs",
   "scripts": {
-    "dev": "vitepress dev docs",
+    "dev": "vitepress dev docs --host",
     "build": "vitepress build docs",
-    "lint": "node readFiles.js && prettier --w . --config .prettierrc"
+    "lint": "prettier --w . --config .prettierrc"
   },
   "devDependencies": {
+    "markdown-it-anchor": "^8.4.1",
+    "markdown-it-copy": "^1.2.0",
     "prettier": "^2.4.1",
     "vitepress": "^0.20.0"
   }

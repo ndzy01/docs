@@ -1,15 +1,20 @@
-import { nav, sidebar } from './data';
+import { nav, sidebar, pages } from '../../readFiles';
 
 export default {
   title: 'docs',
   description: 'docs',
   docsDir: 'docs',
-  themeConfig: {
-    algolia: {
-      apiKey: 'ef66bb20104d82b7c4f08621b4c73c92',
-      indexName: 'ndzy-docs',
+  markdown: {
+    config: (md) => {
+      md.use(require('markdown-it-copy'), { btnText: '复制' }).use(
+        require('markdown-it-anchor'),
+        {},
+      );
     },
+  },
+  themeConfig: {
     nav,
     sidebar,
+    pages,
   },
 };

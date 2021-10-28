@@ -7,6 +7,7 @@ function readFileList(
   filesList = [],
   dirList = [],
   dirName = '',
+  pages = [],
 ) {
   const files = fs.readdirSync(dir);
   files.forEach((item) => {
@@ -14,13 +15,23 @@ function readFileList(
     const stat = fs.statSync(filePath);
 
     if (stat.isDirectory() && item !== '.vitepress') {
-      readFileList(path.join(dir, item), filesList, dirList, item);
+      readFileList(path.join(dir, item), filesList, dirList, item, pages);
       dirList.push(item);
     } else {
+      const flag1 = '/docs/docs';
+      const flag2 = '/docs/docs/';
       const fileNameArr = path.basename(filePath).split('.');
       const name = fileNameArr[0];
       const type = fileNameArr[1];
-      const path_ = filePath.split('/docs/docs')[1].split('.')[0];
+      const path_ = filePath.split(flag1)[1].split('.')[0];
+
+      if (type === 'md') {
+        pages.push({
+          page: fs.readFileSync(filePath, 'utf-8'),
+          path: `${filePath.split(flag1)[1].replace('.md', '.html')}`,
+          name: filePath.split(flag2)[1].split('.')[0].split('/').join('-'),
+        });
+      }
 
       if (type === 'md' && name !== 'index') {
         filesList.push({
@@ -31,10 +42,10 @@ function readFileList(
       }
     }
   });
-  return { filesList, dirList };
+  return { filesList, dirList, pages };
 }
 
-const { filesList, dirList } = readFileList();
+const { filesList, dirList, pages } = readFileList();
 const nav = [];
 const sidebar = {};
 
@@ -53,10 +64,8 @@ filesList.map((_) => {
   return _;
 });
 
-const str = `export const nav = ${JSON.stringify(
+module.exports = {
   nav,
-)};export const sidebar = ${JSON.stringify(sidebar)}`;
-
-fs.writeFileSync('./docs/.vitepress/data.ts', str);
-
-module.exports = readFileList;
+  sidebar,
+  pages,
+};
