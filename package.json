@@ -7,10 +7,11 @@
   },
   "devDependencies": {
     "@types/node": "^16.11.6",
-    "lunr": "^2.3.9",
     "markdown-it-anchor": "^8.4.1",
     "markdown-it-copy": "^1.2.0",
+    "pre-commit": "^1.2.2",
     "prettier": "^2.4.1",
     "vitepress": "^0.20.0"
-  }
+  },
+  "pre-commit": "lint"
 }

@@ -6,5 +6,4 @@
 
 ## algolia
 
-test
-[algolia](https://docsearch.algolia.com/apply/)
+[algolia](https://docsearch.algolia.com/apply/ )
