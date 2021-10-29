@@ -1,15 +1,26 @@
 <script setup>
 import DefaultTheme from 'vitepress/theme';
+import lunr from 'lunr';
 import { useData } from 'vitepress';
 import { ref } from 'vue';
 
 const { Layout } = DefaultTheme;
 const pages = useData().theme.value.pages || [];
+const idx = lunr(function () {
+  this.ref('path');
+  this.field('page');
+
+  pages.forEach(function (doc) {
+    this.add(doc);
+  }, this);
+});
 let v = ref('');
 let list = ref([]);
 
 const search = () => {
   const reg = new RegExp(v.value, 'g');
+  const r = idx.search('*' + v.value + '*');
+  console.log('r', r);
   const _List = pages.filter((_) => _.page.match(reg));
 
   list.value = _List;

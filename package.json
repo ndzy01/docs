@@ -6,6 +6,8 @@
     "lint": "prettier --w . --config .prettierrc"
   },
   "devDependencies": {
+    "@types/node": "^16.11.6",
+    "lunr": "^2.3.9",
     "markdown-it-anchor": "^8.4.1",
     "markdown-it-copy": "^1.2.0",
     "prettier": "^2.4.1",
