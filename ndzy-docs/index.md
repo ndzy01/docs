@@ -4,6 +4,9 @@
 
 `yarn upgrade-interactive --latest`
 
-## algolia
+## git 代理设置
 
-[algolia](https://docsearch.algolia.com/apply/)
+```bash
+git config --global https.proxy http://127.0.0.1:xxxx
+git config --global http.proxy http://127.0.0.1:xxxx
+```
