@@ -77,7 +77,7 @@ const cancel = () => {
   position: absolute;
   top: 60px;
   max-width: 260px;
-  overflow-x: auto;
+  overflow: auto;
   max-height: calc(100vh - 60px);
 }
 
