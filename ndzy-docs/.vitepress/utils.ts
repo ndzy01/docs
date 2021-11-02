@@ -14,7 +14,7 @@ export const readFileList = (
     const filePath = path.join(dir, item);
     const stat = fs.statSync(filePath);
 
-    if (stat.isDirectory() && item !== '.vitepress') {
+    if (stat.isDirectory() && item !== '.vitepress' && item !== 'public') {
       readFileList(path.join(dir, item), filesList, dirList, item, pages);
       dirList.push(item);
     } else {

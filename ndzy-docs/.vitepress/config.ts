@@ -12,6 +12,15 @@ export default {
       );
     },
   },
+  head: [
+    [
+      'link',
+      {
+        rel: 'icon',
+        href: '/favicon.png',
+      },
+    ],
+  ],
   themeConfig: {
     logo: '/favicon.png',
     nav,
