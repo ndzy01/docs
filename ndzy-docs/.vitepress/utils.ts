@@ -1,14 +1,14 @@
 const fs = require('fs');
 const path = require('path');
-const docsRoot = path.join(__dirname, '.', 'ndzy-docs');
+const docsRoot = path.join(__dirname, '../');
 
-function readFileList(
+export const readFileList = (
   dir = docsRoot,
   filesList = [],
   dirList = [],
   dirName = '',
   pages = [],
-) {
+) => {
   const files = fs.readdirSync(dir);
   files.forEach((item) => {
     const filePath = path.join(dir, item);
@@ -43,29 +43,29 @@ function readFileList(
     }
   });
   return { filesList, dirList, pages };
-}
-
-const { filesList, dirList, pages } = readFileList();
-const nav = [];
-const sidebar = {};
-
-dirList.map((_) => {
-  const obj = { text: _, link: `/${_}/` };
-  nav.push(obj);
-  sidebar[`/${_}/`] = [];
-
-  return _;
-});
-
-filesList.map((_) => {
-  const obj = { text: _.name, link: _.path };
-  sidebar[_.dirName].push(obj);
-
-  return _;
-});
-
-module.exports = {
-  nav,
-  sidebar,
-  pages,
 };
+const fn = () => {
+  const { filesList, dirList, pages } = readFileList();
+  const nav = [];
+  const sidebar = {};
+
+  dirList.map((_) => {
+    const obj = { text: _, link: `/${_}/` };
+    nav.push(obj);
+    sidebar[`/${_}/`] = [];
+
+    return _;
+  });
+
+  filesList.map((_) => {
+    const obj = { text: _.name, link: _.path };
+    sidebar[_.dirName].push(obj);
+
+    return _;
+  });
+
+  return { nav, pages, sidebar };
+};
+export const nav = fn().nav;
+export const pages = fn().pages;
+export const sidebar = fn().sidebar;

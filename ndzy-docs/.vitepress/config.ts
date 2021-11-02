@@ -1,4 +1,4 @@
-import { nav, sidebar, pages } from '../../readFiles';
+import { nav, sidebar, pages } from './utils';
 
 export default {
   title: 'docs',
@@ -13,6 +13,7 @@ export default {
     },
   },
   themeConfig: {
+    logo: '/favicon.png',
     nav,
     sidebar,
     pages,

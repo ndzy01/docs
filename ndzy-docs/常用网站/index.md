@@ -6,3 +6,4 @@
 - [语雀-开发者文档](https://www.yuque.com/yuque/developer/api)
 - [redux-toolkit](https://redux-toolkit.js.org/)
 - [https://docs-tan.vercel.app/](https://docs-tan.vercel.app/)
+- [个人笔记](https://www.yuque.com/u22409297/fqv2ol)

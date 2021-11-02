@@ -60,16 +60,20 @@ const cancel = () => {
 <style scoped>
 .search {
   padding: 8px;
+  min-width: 260px;
 }
 
 .list {
   position: absolute;
   top: 60px;
+  max-width: 260px;
+  overflow-x: auto;
+  max-height: calc(100vh - 60px);
 }
 
 .list-detail {
-  margin-left: 16px;
-  font-size: 8px;
+  padding: 2px 16px;
+  font-size: 14px;
 }
 
 .list-detail ol {
