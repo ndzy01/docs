@@ -39,9 +39,11 @@ const cancel = () => {
   <Layout>
     <template #navbar-search>
       <div class="search">
-        <input v-model="v" />
-        <button @click="search">搜索</button>
-        <button @click="cancel">取消</button>
+        <div class="flex">
+          <input class="block" v-model="v" />
+          <button class="block" @click="search">搜索</button>
+          <button class="block" @click="cancel">取消</button>
+        </div>
         <div class="list">
           <div v-for="item in list" :key="item.path">
             <a :href="item.path">{{ item.name }}</a>
@@ -61,6 +63,14 @@ const cancel = () => {
 .search {
   padding: 8px;
   min-width: 260px;
+}
+
+.flex {
+  display: flex;
+}
+
+.block {
+  display: inline-block;
 }
 
 .list {
