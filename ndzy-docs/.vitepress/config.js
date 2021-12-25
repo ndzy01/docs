@@ -5,11 +5,9 @@ export default {
   description: 'docs',
   docsDir: 'ndzy-docs',
   markdown: {
+    anchor: { permalink: false },
     config: (md) => {
-      md.use(require('markdown-it-copy'), { btnText: '复制' }).use(
-        require('markdown-it-anchor'),
-        {},
-      );
+      md.use(require('markdown-it-copy'), { btnText: '复制' });
     },
   },
   head: [
