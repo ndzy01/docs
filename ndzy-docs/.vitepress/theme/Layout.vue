@@ -5,8 +5,8 @@ import { ref } from 'vue';
 
 const { Layout } = DefaultTheme;
 const pages = useData().theme.value.pages || [];
-let v = ref('');
-let list = ref([]);
+const v = ref('');
+const list = ref([]);
 
 const search = () => {
   if (v.value) {
@@ -32,6 +32,7 @@ const search = () => {
 };
 const cancel = () => {
   list.value = [];
+  v.value = '';
 };
 </script>
 
