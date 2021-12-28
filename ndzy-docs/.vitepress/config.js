@@ -5,7 +5,7 @@ export default {
   description: 'docs',
   docsDir: 'ndzy-docs',
   markdown: {
-    anchor: { permalink: false },
+    lineNumbers: true,
     config: (md) => {
       md.use(require('markdown-it-copy'), { btnText: '复制' });
     },
