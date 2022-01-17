@@ -10,5 +10,8 @@
     "markdown-it-copy": "^1.2.0",
     "prettier": "^2.5.1",
     "vitepress": "^0.20.9"
+  },
+  "dependencies": {
+    "dayjs": "^1.10.7"
   }
 }
